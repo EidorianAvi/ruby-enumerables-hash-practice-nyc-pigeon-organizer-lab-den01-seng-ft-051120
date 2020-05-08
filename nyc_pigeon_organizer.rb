@@ -20,7 +20,13 @@ def nyc_pigeon_organizer(data)
   pigeon_list = Hash.new
   data.each do |key, value| #key = cgl, value = descriptor
     value.each do |attribute, array|
+      array.each do |name|
+        if !pigeon_list[name]
+          pigeon_list[name] = Hash.new
+        end
+        if !pigeon_list[name]
+      end
     end
   end
-    
+  pigeon_list
 end
