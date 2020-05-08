@@ -18,18 +18,18 @@
 
 def nyc_pigeon_organizer(data)
   pigeon_list = Hash.new
-   data.each do |cgl, value|
-     value.each do |quality, array|
-       array.each do |name|
-         if pigeon_list[name] == nil
-           pigeon_list[name] = {}
-         end
-         if pigeon_list[name][cgl] == nil
-           pigeon_list[name][cgl] = []
-         end
-         pigeon_list[name][cgl] << quality.to_s
-       end
-     end
-   end
-  pigeon_list
+  data.each do |key, value|
+    value.each do |value2, array|
+      array.each do |name|
+        if !pigeon_list[name]
+          pigeon_list[name] = Hash.new
+        end
+        if !pigeon_list[name][key]
+          pigeon_list[name][key] = Array.new
+        end
+        pigeon_list[name][key] << value.to_s
+      end
+    end
+  end
+  pigeon_data
 end
