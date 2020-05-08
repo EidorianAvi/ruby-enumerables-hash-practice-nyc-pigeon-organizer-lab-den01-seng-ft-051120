@@ -27,7 +27,7 @@ def nyc_pigeon_organizer(data)
         if !pigeon_list[name][key]
           pigeon_list[name][key] = Array.new
         end
-        pigeon_list[name][key] << value.to_s
+        pigeon_list[name][key] << value2.to_s
       end
     end
   end
