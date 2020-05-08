@@ -24,7 +24,10 @@ def nyc_pigeon_organizer(data)
         if !pigeon_list[name]
           pigeon_list[name] = Hash.new
         end
-        if !pigeon_list[name]
+        if !pigeon_list[name][key]
+          pigeon_list[name][key] = Array.new
+        end
+        pigeon_list[name][key] << attribute.to_s
       end
     end
   end
