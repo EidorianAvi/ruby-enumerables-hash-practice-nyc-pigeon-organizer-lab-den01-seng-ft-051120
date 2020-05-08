@@ -25,9 +25,9 @@ def nyc_pigeon_organizer(data)
            pigeon_list[name] = {}
          end
          if pigeon_list[name][value] == nil
-           pigeon_list[name][] = []
+           pigeon_list[name][value] = []
          end
-         pigeon_list[name][key] << quality.to_s
+         pigeon_list[name][value] << quality.to_s
        end
      end
    end
