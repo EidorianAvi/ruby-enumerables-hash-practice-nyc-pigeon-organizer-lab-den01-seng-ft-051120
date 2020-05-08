@@ -24,10 +24,10 @@ def nyc_pigeon_organizer(data)
          if pigeon_list[name] == nil
            pigeon_list[name] = {}
          end
-         if pigeon_list[name][value] == nil
-           pigeon_list[name][value] = []
+         if pigeon_list[name][cgl] == nil
+           pigeon_list[name][cgl] = []
          end
-         pigeon_list[name][value] << quality.to_s
+         pigeon_list[name][cgl] << quality.to_s
        end
      end
    end
